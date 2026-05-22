@@ -4,3 +4,8 @@ assets/external/
 *.db
 *.py[cod]
 __pycache__/
+
+
+
+empaquetar.py
+contexto_para_gemini.txt

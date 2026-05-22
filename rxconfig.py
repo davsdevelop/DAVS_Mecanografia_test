@@ -1,7 +1,7 @@
 import reflex as rx
 
 config = rx.Config(
-    app_name="DAVS_Mecanografia_test",
+    app_name="main",
     plugins=[
         rx.plugins.SitemapPlugin(),
         rx.plugins.TailwindV4Plugin(),
