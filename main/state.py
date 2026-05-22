@@ -29,9 +29,7 @@ class TypingState(rx.State):
     @rx.var
     def display_chars(self) -> list[list[str]]:
         cursor = len(self.typed_text)
-
         result = []
-
         for i, char in enumerate(self.target_text):
             #Determinar el estado
             if i < cursor:
@@ -44,7 +42,6 @@ class TypingState(rx.State):
             #Contruir el css
             suffix = "-space" if char == " " and state in ("wrong", "cursor") else ""
             css = f"char-{state}{suffix}"
-
             result.append([char, css])
 
         return result
@@ -52,7 +49,6 @@ class TypingState(rx.State):
 
     @rx.event
     def key_input(self, value: str):
-        """Se ejecuta en cada tecla. Actualiza el texto escrito y el cronometro."""
         if self.is_finished:
             return
         
@@ -101,7 +97,6 @@ class TypingState(rx.State):
                 contador += 1
         return contador
     
-    # state.py
     @rx.event
     def handle_key_down(self, key: str):
         if key == "Tab":
@@ -157,5 +152,5 @@ class TypingState(rx.State):
             if typed_char == target_char:
                 count += 1
             else:
-                count = 0  # se resetea al primer error
+                count = 0 
         return count

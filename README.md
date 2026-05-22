@@ -1,4 +1,4 @@
-# DAVS Mecanografia TEST
+# DAVS Mecanografía TEST
 
 Test de velocidad de escritura construido con [Reflex](https://reflex.dev). Muestra un párrafo aleatorio, mide el tiempo desde la primera tecla hasta completar el texto, y presenta estadísticas al finalizar.
 
