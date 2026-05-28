@@ -2,7 +2,9 @@ import reflex as rx
 
 config = rx.Config(
     app_name="main",
-    # Permite que el frontend se comunique con este backend
+    # 1. FORZAMOS A QUE EL FRONTEND APUNTE AL BACKEND CORRECTO
+    api_url="https://davs-mecanografia-test.onrender.com", 
+    # 2. PERMITIMOS QUE EL BACKEND RECIBA LA CONEXIÓN
     cors_allowed_origins=[
         "*"
     ],
