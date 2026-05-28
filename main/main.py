@@ -34,7 +34,7 @@ def index() -> rx.Component:
                 "© 2026 Mecanografía TEST. Todos los derechos reservados.",
                 size="2",
                 color="#464649",
-                padding_right="40px"
+                padding_right="160px"
             ),
             width="100%",
             background_color="#c7cbd2",
