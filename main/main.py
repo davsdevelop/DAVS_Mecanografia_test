@@ -5,6 +5,9 @@ from .state import TypingState
 
 def index() -> rx.Component:
     return rx.box(
+        # Script de feedback local para eliminar lag al escribir
+        # Lee assets/typing_local.js y lo inyecta en el cliente
+        rx.script(src="/typing_local.js"),
         header(),
         rx.box(
             rx.cond(
@@ -27,14 +30,14 @@ def index() -> rx.Component:
                 "Desarrollado por: Diego Videla Silva",
                 size="2",
                 color="#464649",
-                padding_left="40px"
+                padding_left="40px",
             ),
             rx.image("/DAVS.png", width="70px"),
             rx.text(
                 "© 2026 Mecanografía TEST. Todos los derechos reservados.",
                 size="2",
                 color="#464649",
-                padding_right="160px"
+                padding_right="160px",
             ),
             width="100%",
             background_color="#c7cbd2",
@@ -46,7 +49,6 @@ def index() -> rx.Component:
         min_height="100vh",
         display="flex",
         flex_direction="column",
-        
     )
 
 

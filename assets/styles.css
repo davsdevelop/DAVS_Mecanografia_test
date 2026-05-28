@@ -44,19 +44,20 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;       
+  text-align: center;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   color: black;
   font-size: 2rem;
-  /* font-weight: 600; */
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .logo-accent {
   font-size: 1.3rem;
-  /* font-weight: 650; */
+  font-weight: 600;
   color: black;
-  /* line-height: 1; */
 }
 
 .header-controls {
@@ -156,9 +157,9 @@ body,
 
 .text-display {
   font-size: 1.45rem;
+  font-weight: 600;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  /* white-space: pre-wrap; */
   word-break: break-word;
   padding: 1.5rem;
   background-color: #c7cbd2;
@@ -176,11 +177,13 @@ body,
 .char-correct {
   display: inline;
   color: #09904d;
+  font-weight: 600;
 }
 
 .char-wrong {
   display: inline;
   color: #ca4754;
+  font-weight: 600;
 }
 
 .char-cursor {
@@ -188,11 +191,13 @@ body,
   color: #d1d0c5;
   background-color: #4d5053;
   border-radius: 2px;
+  font-weight: 600;
 }
 
 .char-pending {
   display: inline;
   color: black;
+  font-weight: 600;
 }
 
 .char-wrong-space {
@@ -218,6 +223,7 @@ body,
   padding: 0.75rem 1rem !important;
   font-family: 'Courier New', monospace !important;
   font-size: 1rem !important;
+  font-weight: 600 !important;
   outline: none;
   margin-bottom: 0.5rem;
   box-shadow: none !important;
