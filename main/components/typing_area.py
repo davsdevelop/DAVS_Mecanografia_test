@@ -28,13 +28,14 @@ def typing_area() -> rx.Component:
         # Por ahora, el mayor impacto viene de reducir el tamaño del payload
         # (stats solo al finalizar) y simplificar display_chars.
         rx.input(
-            value=TypingState.current_input,
+            # value=TypingState.current_input,
             on_change=TypingState.key_input,
             auto_focus=True,
             disabled=TypingState.is_finished,
             class_name="typing-input",
             debounce_timeout=0,
             on_key_down=TypingState.handle_key_down,
+            id="typing-input-field", 
             # Prevenir comportamientos del browser que agregan lag
             spell_check=False,
             auto_complete=False,

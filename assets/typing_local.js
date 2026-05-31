@@ -81,13 +81,14 @@
         }
     }
 
-    function handleKeyDown(e) {
-        if (e.key === 'Tab') {
-            e.preventDefault();
-            resetLocal();
-            // Deja que el evento Tab llegue a Reflex para reset del servidor
-        }
-    }
+        function handleKeyDown(e) {
+                if (e.key === 'Tab') {
+                    e.preventDefault();
+                    e.target.value = ''; // CAMBIO: Vaciar el input físicamente aquí
+                    resetLocal();
+                    // Deja que el evento Tab llegue a Reflex para reset del servidor
+                }
+            }
 
     function renderChars(typed) {
         const textDisplay = document.querySelector('.text-display');

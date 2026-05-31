@@ -150,7 +150,7 @@ class TypingState(rx.State):
         self.final_streak = 0
         if self.paragraph_text:
             self.target_text = random.choice(self.paragraph_text)
-
+        return rx.set_value("typing-input-field", "")
     # ── vars de stats: ahora apuntan a los valores finales pre-calculados ──
     @rx.var
     def wpm(self) -> str:

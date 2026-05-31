@@ -256,3 +256,58 @@ body,
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
+
+/* ── Diseño Responsivo (Móviles) ─────────────────── */
+@media (max-width: 768px) {
+  /* Pasamos el header a columna para que nada choque */
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+  
+  /* Quitamos la posición absoluta para que fluya natural */
+  .logo-texts, .logo {
+    position: static;
+    transform: none;
+  }
+  
+  /* Achicamos un poco el título y permitimos que el subtítulo baje de línea */
+  .logo-texts {
+    font-size: 1.5rem;
+  }
+  .logo-accent {
+    font-size: 0.9rem;
+    white-space: normal; 
+  }
+  
+  /* Centramos el botón de reiniciar */
+  .header-controls {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Reducimos márgenes y tamaño de fuente del texto a escribir */
+  .text-display {
+    font-size: 1.1rem;
+    padding: 1rem;
+    min-height: 80px;
+  }
+  
+  /* Reducimos el padding lateral del contenedor principal */
+  .content {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Hacemos las tarjetas de estadísticas un poco más compactas */
+  .stat-card {
+    min-width: 75px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ── Corrección para renderizar los espacios invisibles ─────────────────── */
+.text-display span {
+  white-space: pre-wrap;
+}
