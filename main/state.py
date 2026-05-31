@@ -7,7 +7,7 @@ from pathlib import Path
 
 class TypingState(rx.State):
     paragraph_text: list[str] = []
-    target_text: str = ""
+    target_text: str = "Iniciando el servidor... Puedes usar este texto de calentamiento mientras el sistema carga los párrafos oficiales. La conexión puede tardar unos segundos en establecerse por completo."
     current_input: str = ""
     typed_text: str = ""
     is_started: bool = False
